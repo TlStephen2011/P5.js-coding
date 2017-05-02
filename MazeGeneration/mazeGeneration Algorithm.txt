@@ -1,0 +1,53 @@
+edgeArray = {{1,4}, {1,2}, {2,3}, {2,5}, {3,6}, {4,5}, {4,7}, {5,6}, {5,8},
+	     {6,9},12:44 AM 2017/05/02 {7,8}, {8,9}}
+
+cellArray = {{1}, {2}, {3}, {4}, {5}, {6}, {7}, {8}, {9}}
+
+Now we choose a random edge: Eg. {2,3}
+
+If {2,3} is NOT in the same set, then REMOVE "the random chosen edge" 
+i.e {2,3} from edgeArray and ALSO loop through the cellArray for the first component of 
+the chosen edge and the second component AND move the second component into the first.
+
+So now we will have:
+
+edgeArray = {{1,4}, {1,2}, {2,5}, {3,6}, {4,5}, {4,7}, {5,6}, {5,8},
+	     {6,9}, {7,8}, {8,9}}
+
+cellArray = {{1}, {2,3}, {4}, {5}, {6}, {7}, {8}, {9}}
+
+Now we choose a random edge: Eg. {2,5}
+
+If {2,5} is NOT the same set, then REMOVE "the random chosen edge" 
+i.e {2,5} from edgeArray and ALSO loop through the cellArray for the first component of 
+the chosen edge and the second component AND move the second component into the first.
+
+edgeArray = {{1,4}, {1,2}, {3,6}, {4,5}, {4,7}, {5,6}, {5,8},
+	     {6,9}, {7,8}, {8,9}}
+
+cellArray = {{1}, {2,3,5}, {4}, {6}, {7}, {8}, {9}}
+
+Now we choose a random edge: Eg. {5,6}
+
+If {5,6} is NOT the same set, then REMOVE "the random chosen edge" 
+i.e {5,6} from edgeArray and ALSO loop through the cellArray for the first component of 
+the chosen edge and the second component AND move the second component into the first.
+
+edgeArray = {{1,4}, {1,2}, {3,6}, {4,5}, {4,7}, {5,8},
+	     {6,9}, {7,8}, {8,9}}
+
+cellArray = {{1}, {2,3,5,6}, {4}, {7}, {8}, {9}}
+
+Now we choose a random edge: Eg. {3,6}.
+
+If {3,6} is NOT the same set, then REMOVE "the random chosen edge" 
+i.e {3,6} from edgeArray and ALSO loop through the cellArray for the first component of 
+the chosen edge and the second component AND move the second component into the first.
+
+BUT NOW: 3 & 6 are in the same set i.e {2,3,5,6} THEREFORE just delete this element {3,6}
+without removing the edge.
+
+AND CONTINUE...
+
+
+
